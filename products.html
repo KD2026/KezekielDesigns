@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Kezekiel Designs</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #f7ead7 0%, #f3d2a2 45%, #9f4b1f 100%);
+      color: #2a1608;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(180deg, rgba(53, 25, 8, 0.92), rgba(120, 49, 13, 0.88));
+      color: white;
+      text-align: center;
+      padding: 24px 20px;
+      border-bottom: 5px solid #f29a1f;
+    }
+
+    .logo-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .logo-wrap img {
+      width: 320px;
+      max-width: 85vw;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+    }
+
+    nav {
+      background-color: #2f1405;
+      text-align: center;
+      padding: 14px;
+      border-bottom: 3px solid #f29a1f;
+    }
+
+    nav a {
+      color: #fff4df;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffbf57;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 28px auto;
+      padding: 30px;
+      background: rgba(255, 246, 232, 0.92);
+      border-radius: 18px;
+      border: 2px solid rgba(163, 72, 18, 0.18);
+      box-shadow: 0 8px 20px rgba(56, 20, 0, 0.14);
+    }
+
+    h2 {
+      color: #7b2f0f;
+      margin-top: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff7eb;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      border-top: 5px solid #d96b1d;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 420px;
+    }
+
+    .card img {
+      width: 170px;
+      margin: 12px auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #cb5c17;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      filter: brightness(1.05);
+    }
+
+    .color-title {
+      margin-top: 14px;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #7b2f0f;
+      font-size: 0.95rem;
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .color-item {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #4a2a14;
+    }
+
+    .color-bubble {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      margin: 0 auto 6px;
+      border: 2px solid rgba(0, 0, 0, 0.18);
+      box-shadow: inset 0 1px 2px rgba(255,255,255,0.35);
+    }
+
+    .red { background: #c81f32; }
+    .neon-orange { background: #ff6a13; }
+    .aluminum { background: #d9d9d2; }
+    .black { background: #1f1f1f; }
+    .royal { background: #2458d3; }
+    .safety-green { background: #c8e600; }
+    .medium-grey { background: #a7a8aa; }
+    .woodland {
+      background: linear-gradient(135deg, #4f5a33 0%, #7a6a43 50%, #2f3a22 100%);
+    }
+    .olive { background: #556b2f; }
+
+    .military-green { background: #4b5b34; }
+    .graphite { background: #57585c; }
+    .silver { background: #d5d5d5; }
+    .safety-orange { background: #ff6a00; }
+    .safety-yellow { background: #d7ef2a; }
+
+    footer {
+      background-color: #2f1405;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 700px) {
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+
+      section {
+        margin: 18px 12px;
+        padding: 24px 18px;
+      }
+
+      .color-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <img src="logo.png" alt="Logo">
+  </div>
+  <p>Explore our main apparel and hat options</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="quote.html">Quote</a>
+</nav>
+
+<section>
+  <h2>Shirts</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div>
+        <h3>Performance Work Shirts</h3>
+        <img src="shirt1.png" alt="Performance Work Shirts">
+        <p>Lightweight, breathable, and built for hot job sites.</p>
+        <p><strong>$27+</strong></p>
+        <p><strong>5 minimum</strong></p>
+
+        <div class="color-title">Available Colors</div>
+        <div class="color-grid">
+          <div class="color-item">
+            <div class="color-bubble red"></div>
+            Red
+          </div>
+          <div class="color-item">
+            <div class="color-bubble neon-orange"></div>
+            Neon Orange
+          </div>
+          <div class="color-item">
+            <div class="color-bubble aluminum"></div>
+            Aluminum
+          </div>
+          <div class="color-item">
+            <div class="color-bubble black"></div>
+            Black
+          </div>
+          <div class="color-item">
+            <div class="color-bubble royal"></div>
+            Royal
+          </div>
+          <div class="color-item">
+            <div class="color-bubble safety-green"></div>
+            Safety Green
+          </div>
+          <div class="color-item">
+            <div class="color-bubble medium-grey"></div>
+            Medium Grey
+          </div>
+          <div class="color-item">
+            <div class="color-bubble woodland"></div>
+            Woodland
+          </div>
+          <div class="color-item">
+            <div class="color-bubble olive"></div>
+            Olive
+          </div>
+        </div>
+      </div>
+      <a class="button" href="quote.html?product=performance">Request Quote</a>
+    </div>
+
+    <div class="card">
+      <div>
+        <h3>Long Sleeve Performance Shirts</h3>
+        <img src="longsleeve.png" alt="Long Sleeve Performance Shirts">
+        <p>Lightweight performance material with added sleeve coverage for cooler mornings and sun protection.</p>
+        <p><strong>Request pricing</strong></p>
+        <p><strong>5 minimum</strong></p>
+
+        <div class="color-title">Available Colors</div>
+        <div class="color-grid">
+          <div class="color-item">
+            <div class="color-bubble military-green"></div>
+            Military Green
+          </div>
+          <div class="color-item">
+            <div class="color-bubble royal"></div>
+            Royal
+          </div>
+          <div class="color-item">
+            <div class="color-bubble graphite"></div>
+            Graphite
+          </div>
+          <div class="color-item">
+            <div class="color-bubble silver"></div>
+            Silver
+          </div>
+          <div class="color-item">
+            <div class="color-bubble black"></div>
+            Black
+          </div>
+          <div class="color-item">
+            <div class="color-bubble safety-orange"></div>
+            Safety Orange
+          </div>
+          <div class="color-item">
+            <div class="color-bubble safety-yellow"></div>
+            Safety Yellow
+          </div>
+        </div>
+      </div>
+      <a class="button" href="quote.html">Request Quote</a>
+    </div>
+
+    <div class="card">
+      <div>
+        <h3>Standard Cotton Shirts</h3>
+        <img src="shirt2.png" alt="Standard Cotton Shirts">
+        <p>Durable everyday wear.</p>
+        <p><strong>$24+</strong></p>
+        <p><strong>5 minimum</strong></p>
+      </div>
+      <a class="button" href="quote.html?product=standard">Request Quote</a>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Hats</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div>
+        <h3>Trucker Hats</h3>
+        <img src="dtf_hat.png" alt="Trucker Hats">
+        <p>Available with DTF or Patch styles.</p>
+        <p><strong>DTF: $22+ (5 min)</strong></p>
+        <p><strong>Patch: $27+ (10 min)</strong></p>
+      </div>
+      <a class="button" href="quote.html?product=dtf">Request Quote</a>
+    </div>
+
+    <div class="card">
+      <div>
+        <h3>Snapback Hats</h3>
+        <img src="patch_hat.png" alt="Snapback Hats">
+        <p>Available with DTF or Patch styles.</p>
+        <p><strong>DTF: $22+ (5 min)</strong></p>
+        <p><strong>Patch: $27+ (10 min)</strong></p>
+      </div>
+      <a class="button" href="quote.html?product=patch">Request Quote</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Kezekiel Designs</p>
+</footer>
+
+</body>
+</html>
