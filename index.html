@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kezekiel Designs</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -35,7 +36,12 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, rgba(0,0,0,0.15), rgba(255,153,0,0.08), rgba(0,0,0,0.15));
+      background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.15),
+        rgba(255,153,0,0.08),
+        rgba(0,0,0,0.15)
+      );
       pointer-events: none;
     }
 
@@ -262,6 +268,7 @@
     }
 
     @media (max-width: 700px) {
+
       .services-top-row,
       .services-bottom-row {
         grid-template-columns: 1fr;
@@ -295,139 +302,253 @@
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="hero-content">
-      <div class="logo-wrap">
-        <img src="logo.png" alt="Kezekiel Designs logo" />
-      </div>
-      <p>Custom hats and apparel built for construction, landscaping, and hardworking Arizona businesses.</p>
-      <a class="button" href="quote.html">Request a Quote</a>
+
+<header>
+  <div class="hero-content">
+
+    <div class="logo-wrap">
+      <img src="logo.png" alt="Kezekiel Designs logo" />
     </div>
-  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="products.html">Products</a>
-    <a href="#services">Best Sellers</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#payment">Pay</a>
-    <a href="quote.html">Quote</a>
-  </nav>
-
-  <section class="center-section">
-    <h2>Get Custom Work Shirts & Hats Fast</h2>
-    <p>Built for hardworking crews. Clean branding, fast turnaround, and apparel that helps your business stand out on the job.</p>
-    <div class="button-row">
-      <a class="button" href="quote.html">Get a Free Quote</a>
-      <a class="button secondary" href="products.html">View All Products</a>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>About Us</h2>
     <p>
-      <span class="highlight">Kezekiel Designs</span> creates custom shirts, hats, and branded apparel
-      that help your business stand out, look professional, and advertise everywhere you go.
-    </p>
-  </section>
-
-  <section>
-    <h2>Why Choose Kezekiel Designs</h2>
-    <ul class="trust-list">
-      <li>✔ Built for construction crews, outdoor work, and hardworking businesses</li>
-      <li>✔ Fast turnaround to keep your team moving</li>
-      <li>✔ Low minimums to get started</li>
-      <li>✔ Quality custom branding that helps your company stand out</li>
-    </ul>
-  </section>
-
-  <section id="services">
-    <h2>Best Sellers</h2>
-
-    <div class="services-top-row">
-      <div class="card">
-        <div>
-          <h3>👕 Performance Work Shirts</h3>
-          <span class="popular-badge">Most Popular</span>
-          <img src="shirt1.png" alt="Performance work shirt" class="featured-product-img" onclick="this.classList.toggle('zoomed')" />
-          <p>Lightweight, breathable, and built for hot job sites.</p>
-          <p><strong>Starting at $27</strong></p>
-          <p><strong>5 shirt minimum</strong></p>
-        </div>
-
-        <div>
-          <a class="button" href="quote.html?product=performance">Request This Option</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div>
-          <h3>🧢 DTF Hats</h3>
-          <img src="dtf_hat.png" alt="DTF hat example" class="featured-product-img" onclick="this.classList.toggle('zoomed')" />
-          <p>Perfect for detailed, full-color logos with a clean bold look.</p>
-          <p><strong>Starting at $22</strong></p>
-          <p><strong>5 hat minimum</strong></p>
-        </div>
-
-        <div>
-          <a class="button" href="quote.html?product=dtf">Request This Option</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="center-section" style="margin-top: 24px;">
-      <a class="button secondary" href="products.html">View All Product Options</a>
-    </div>
-  </section>
-
-  <section class="center-section">
-    <h2>Limited Production Spots Each Week</h2>
-    <p>We only take a limited number of orders each week to keep quality high and turnaround fast.</p>
-    <a class="button" href="quote.html">Secure Your Spot</a>
-  </section>
-
-  <section id="gallery">
-    <h2>Our Work in Action</h2>
-    <p>Real crews wearing the custom apparel we create out in the field.</p>
-
-    <div class="gallery">
-      <figure class="gallery-item">
-        <img src="photo1.jpg" alt="Worker wearing custom branded apparel on a demolition job site" onclick="this.classList.toggle('enlarged')" />
-        <figcaption>Custom branded workwear built for real job sites.</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="photo2.jpg" alt="Demolition crew working while wearing branded apparel" onclick="this.classList.toggle('enlarged')" />
-        <figcaption>Professional apparel that keeps your company visible on the job.</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="photo3.jpg" alt="Worker wearing custom red branded hoodie outdoors" onclick="this.classList.toggle('enlarged')" />
-        <figcaption>Bold custom designs made to stand out.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section id="payment">
-    <h2>Pay for Your Order</h2>
-    <p class="payment-note">
-      Ready to pay for your custom order? Use the secure payment link below.
-      Enter the amount we provided in your quote at checkout.
+      Custom hats and apparel built for construction,
+      landscaping, and hardworking Arizona businesses.
     </p>
 
-    <a class="button" href="https://buy.stripe.com/dRm6oIbQqd2x8BE2bC83C00" target="_blank" rel="noopener noreferrer">
-      Pay Now (Card / Apple Pay / Google Pay)
+    <a class="button" href="quote.html">
+      Request a Quote
     </a>
 
-    <p style="margin-top: 18px;">
-      Need a quote first? Start here:
-    </p>
-    <a class="button" href="quote.html">Request a Quote</a>
-  </section>
+  </div>
+</header>
 
-  <footer>
-    <p>&copy; 2026 Kezekiel Designs. All rights reserved.</p>
-  </footer>
+<nav>
+  <a href="#about">About</a>
+  <a href="products.html">Products</a>
+  <a href="#services">Best Sellers</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#payment">Pay</a>
+  <a href="quote.html">Quote</a>
+</nav>
+
+<section class="center-section">
+
+  <h2>Get Custom Work Shirts & Hats Fast</h2>
+
+  <p>
+    Built for hardworking crews. Clean branding, fast turnaround,
+    and apparel that helps your business stand out on the job.
+  </p>
+
+  <div class="button-row">
+    <a class="button" href="quote.html">Get a Free Quote</a>
+
+    <a class="button secondary" href="products.html">
+      View All Products
+    </a>
+  </div>
+
+</section>
+
+<section id="about">
+
+  <h2>About Us</h2>
+
+  <p>
+    <span class="highlight">Kezekiel Designs</span>
+    creates custom shirts, hats, and branded apparel
+    that help your business stand out, look professional,
+    and advertise everywhere you go.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>Why Choose Kezekiel Designs</h2>
+
+  <ul class="trust-list">
+    <li>✔ Built for construction crews, outdoor work, and hardworking businesses</li>
+    <li>✔ Fast turnaround to keep your team moving</li>
+    <li>✔ Low minimums to get started</li>
+    <li>✔ Quality custom branding that helps your company stand out</li>
+  </ul>
+
+</section>
+
+<section id="services">
+
+  <h2>Best Sellers</h2>
+
+  <div class="services-top-row">
+
+    <div class="card">
+
+      <div>
+
+        <h3>👕 Performance Work Shirts</h3>
+
+        <span class="popular-badge">Most Popular</span>
+
+        <img src="shirt1.png"
+             alt="Performance work shirt"
+             class="featured-product-img"
+             onclick="this.classList.toggle('zoomed')" />
+
+        <p>
+          Lightweight, breathable, and built for hot job sites.
+        </p>
+
+        <p><strong>Starting at $27</strong></p>
+
+        <p><strong>5 shirt minimum</strong></p>
+
+      </div>
+
+      <div>
+        <a class="button" href="quote.html?product=performance">
+          Request This Option
+        </a>
+      </div>
+
+    </div>
+
+    <div class="card">
+
+      <div>
+
+        <h3>🧢 Performance Trucker Hats</h3>
+
+        <img src="performancetruckerhat.png"
+             alt="Performance Trucker Hat"
+             class="featured-product-img"
+             onclick="this.classList.toggle('zoomed')" />
+
+        <p>
+          Lightweight breathable trucker hats built for comfort,
+          work, and everyday wear.
+        </p>
+
+        <p><strong>Starting at $25</strong></p>
+
+        <p><strong>5 hat minimum</strong></p>
+
+      </div>
+
+      <div>
+        <a class="button" href="quote.html?product=performancetruckerhat">
+          Request This Option
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="center-section" style="margin-top: 24px;">
+
+    <a class="button secondary" href="products.html">
+      View All Product Options
+    </a>
+
+  </div>
+
+</section>
+
+<section class="center-section">
+
+  <h2>Limited Production Spots Each Week</h2>
+
+  <p>
+    We only take a limited number of orders each week
+    to keep quality high and turnaround fast.
+  </p>
+
+  <a class="button" href="quote.html">
+    Secure Your Spot
+  </a>
+
+</section>
+
+<section id="gallery">
+
+  <h2>Our Work in Action</h2>
+
+  <p>
+    Real crews wearing the custom apparel
+    we create out in the field.
+  </p>
+
+  <div class="gallery">
+
+    <figure class="gallery-item">
+      <img src="photo1.jpg"
+           alt="Worker wearing custom branded apparel on a demolition job site"
+           onclick="this.classList.toggle('enlarged')" />
+
+      <figcaption>
+        Custom branded workwear built for real job sites.
+      </figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img src="photo2.jpg"
+           alt="Demolition crew working while wearing branded apparel"
+           onclick="this.classList.toggle('enlarged')" />
+
+      <figcaption>
+        Professional apparel that keeps your company visible on the job.
+      </figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img src="photo3.jpg"
+           alt="Worker wearing custom red branded hoodie outdoors"
+           onclick="this.classList.toggle('enlarged')" />
+
+      <figcaption>
+        Bold custom designs made to stand out.
+      </figcaption>
+    </figure>
+
+  </div>
+
+</section>
+
+<section id="payment">
+
+  <h2>Pay for Your Order</h2>
+
+  <p class="payment-note">
+    Ready to pay for your custom order?
+    Use the secure payment link below.
+    Enter the amount we provided in your quote at checkout.
+  </p>
+
+  <a class="button"
+     href="https://buy.stripe.com/dRm6oIbQqd2x8BE2bC83C00"
+     target="_blank"
+     rel="noopener noreferrer">
+
+    Pay Now (Card / Apple Pay / Google Pay)
+
+  </a>
+
+  <p style="margin-top: 18px;">
+    Need a quote first? Start here:
+  </p>
+
+  <a class="button" href="quote.html">
+    Request a Quote
+  </a>
+
+</section>
+
+<footer>
+  <p>&copy; 2026 Kezekiel Designs. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
