@@ -241,9 +241,11 @@
 
   <section>
     <h1>Request a Quote</h1>
+
     <p class="note">
-      Minimums: Performance Work Shirts = 5, Standard Cotton Shirts = 5, DTF Hats = 5, Patch Hats = 10.
+      Minimums: Shirts = 5 minimum. Performance Trucker DTF Hats = 5 minimum. Retro Trucker DTF Hats = 5 minimum. Patch Hats = 10 minimum.
     </p>
+
     <p>Mix and match products in one request and we’ll get back to you.</p>
 
     <form action="https://formspree.io/f/mbdpdlqd" method="POST" enctype="multipart/form-data">
@@ -271,6 +273,7 @@
 
       <div style="margin-top: 16px;">
         <label><strong>Select Shirt Products</strong></label>
+
         <div class="checkbox-group">
           <label>
             <input type="checkbox" name="shirt_products[]" value="Performance Work Shirts" id="product-performance" />
@@ -281,10 +284,26 @@
           </label>
 
           <label>
+            <input type="checkbox" name="shirt_products[]" value="Long Sleeve Performance Shirts" id="product-longsleeve" />
+            <span>
+              <strong>Long Sleeve Performance Shirts</strong><br />
+              Starting at $24 • 5 shirt minimum
+            </span>
+          </label>
+
+          <label>
+            <input type="checkbox" name="shirt_products[]" value="Long Sleeve Polo" id="product-longsleevepolo" />
+            <span>
+              <strong>Long Sleeve Polo</strong><br />
+              Starting at $24 • 5 shirt minimum
+            </span>
+          </label>
+
+          <label>
             <input type="checkbox" name="shirt_products[]" value="Standard Cotton Shirts" id="product-standard" />
             <span>
               <strong>Standard Cotton Shirts</strong><br />
-              Starting at $24 • 5 shirt minimum
+              Starting at $22 • 5 shirt minimum
             </span>
           </label>
         </div>
@@ -294,6 +313,16 @@
         <div class="quantity-box">
           <label for="qty-performance">Performance Work Shirts Quantity</label>
           <input type="number" id="qty-performance" name="performance_work_shirts_quantity" min="0" />
+        </div>
+
+        <div class="quantity-box">
+          <label for="qty-longsleeve">Long Sleeve Performance Quantity</label>
+          <input type="number" id="qty-longsleeve" name="long_sleeve_performance_quantity" min="0" />
+        </div>
+
+        <div class="quantity-box">
+          <label for="qty-longsleevepolo">Long Sleeve Polo Quantity</label>
+          <input type="number" id="qty-longsleevepolo" name="long_sleeve_polo_quantity" min="0" />
         </div>
 
         <div class="quantity-box">
@@ -312,6 +341,30 @@
             <label><input type="checkbox" name="performance_sizes[]" value="XL" /> XL</label>
             <label><input type="checkbox" name="performance_sizes[]" value="2XL" /> 2XL</label>
             <label><input type="checkbox" name="performance_sizes[]" value="3XL" /> 3XL</label>
+          </div>
+        </div>
+
+        <div class="size-box">
+          <label><strong>Long Sleeve Performance Sizes</strong></label>
+          <div class="size-check-grid">
+            <label><input type="checkbox" name="longsleeve_sizes[]" value="S" /> S</label>
+            <label><input type="checkbox" name="longsleeve_sizes[]" value="M" /> M</label>
+            <label><input type="checkbox" name="longsleeve_sizes[]" value="L" /> L</label>
+            <label><input type="checkbox" name="longsleeve_sizes[]" value="XL" /> XL</label>
+            <label><input type="checkbox" name="longsleeve_sizes[]" value="2XL" /> 2XL</label>
+            <label><input type="checkbox" name="longsleeve_sizes[]" value="3XL" /> 3XL</label>
+          </div>
+        </div>
+
+        <div class="size-box">
+          <label><strong>Long Sleeve Polo Sizes</strong></label>
+          <div class="size-check-grid">
+            <label><input type="checkbox" name="longsleevepolo_sizes[]" value="S" /> S</label>
+            <label><input type="checkbox" name="longsleevepolo_sizes[]" value="M" /> M</label>
+            <label><input type="checkbox" name="longsleevepolo_sizes[]" value="L" /> L</label>
+            <label><input type="checkbox" name="longsleevepolo_sizes[]" value="XL" /> XL</label>
+            <label><input type="checkbox" name="longsleevepolo_sizes[]" value="2XL" /> 2XL</label>
+            <label><input type="checkbox" name="longsleevepolo_sizes[]" value="3XL" /> 3XL</label>
           </div>
         </div>
 
@@ -337,8 +390,8 @@
           <label for="hat-type">Hat Type</label>
           <select id="hat-type" name="hat_type">
             <option value="">Select hat type</option>
-            <option value="Trucker Hats">Trucker Hats</option>
-            <option value="Snapback Hats">Snapback Hats</option>
+            <option value="Performance Trucker Hats">Performance Trucker Hats</option>
+            <option value="Retro Trucker Hats">Retro Trucker Hats</option>
           </select>
         </div>
 
@@ -360,7 +413,7 @@
 
         <div class="quantity-box">
           <label for="hat-minimum-note">Hat Pricing / Minimum Reminder</label>
-          <input type="text" id="hat-minimum-note" value="DTF: $22+ with 5 minimum | Patch: $27+ with 10 minimum" readonly />
+          <input type="text" id="hat-minimum-note" value="Performance DTF: $25+ | Retro DTF: $22+ | Patch: $30+" readonly />
         </div>
       </div>
 
@@ -398,19 +451,31 @@
       document.getElementById("qty-performance").value = 5;
     }
 
+    if (product === "longsleeve") {
+      document.getElementById("product-longsleeve").checked = true;
+      document.getElementById("qty-longsleeve").value = 5;
+    }
+
+    if (product === "longsleevepolo") {
+      document.getElementById("product-longsleevepolo").checked = true;
+      document.getElementById("qty-longsleevepolo").value = 5;
+    }
+
     if (product === "standard") {
       document.getElementById("product-standard").checked = true;
       document.getElementById("qty-standard").value = 5;
     }
 
-    if (product === "dtf") {
+    if (product === "performancetruckerhat") {
+      document.getElementById("hat-type").value = "Performance Trucker Hats";
       document.getElementById("hat-style").value = "DTF";
       document.getElementById("qty-hats").value = 5;
     }
 
-    if (product === "patch") {
-      document.getElementById("hat-style").value = "Patch";
-      document.getElementById("qty-hats").value = 10;
+    if (product === "retrotruckerhat") {
+      document.getElementById("hat-type").value = "Retro Trucker Hats";
+      document.getElementById("hat-style").value = "DTF";
+      document.getElementById("qty-hats").value = 5;
     }
   </script>
 </body>
