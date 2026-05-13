@@ -85,13 +85,11 @@
       text-align: center;
       border-top: 5px solid #d96b1d;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
       height: 100%;
-      min-height: 540px;
+      min-height: 560px;
     }
 
     .card-content {
@@ -108,11 +106,30 @@
       margin-top: auto;
     }
 
+    .image-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 12px auto;
+    }
+
     .shirt-img {
       width: 190px;
       height: 190px;
       object-fit: contain;
       margin: 12px auto;
+      display: block;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .small-shirt-img {
+      width: 135px;
+      height: 170px;
+      object-fit: contain;
       display: block;
       border-radius: 8px;
       cursor: pointer;
@@ -179,7 +196,6 @@
     }
 
     @media (max-width: 700px) {
-
       nav a {
         display: inline-block;
         margin: 8px;
@@ -196,8 +212,13 @@
         height: 160px;
       }
 
+      .small-shirt-img {
+        width: 120px;
+        height: 150px;
+      }
+
       .card {
-        min-height: 500px;
+        min-height: 520px;
       }
 
       .zoomed {
@@ -230,13 +251,9 @@
 
     <div class="card">
       <div class="card-content">
-
         <h3>Performance Work Shirts</h3>
 
-        <img src="shirt1.png"
-             alt="Performance Work Shirts"
-             class="shirt-img"
-             onclick="this.classList.toggle('zoomed')">
+        <img src="shirt1.png" alt="Performance Work Shirts" class="shirt-img" onclick="this.classList.toggle('zoomed')">
 
         <div class="product-info">
           <p>Lightweight, breathable, and built for hot job sites.</p>
@@ -246,7 +263,6 @@
 
         <div class="color-area">
           <div class="color-label">Available Colors</div>
-
           <select class="color-dropdown">
             <option>Red</option>
             <option>Neon Orange</option>
@@ -259,33 +275,60 @@
             <option>Olive</option>
           </select>
         </div>
-
       </div>
 
-      <a class="button" href="quote.html?product=performance">
-        Request Quote
-      </a>
+      <a class="button" href="quote.html?product=performance">Request Quote</a>
     </div>
 
     <div class="card">
       <div class="card-content">
+        <h3>Short Sleeve Polo</h3>
 
-        <h3>Long Sleeve Performance Shirts</h3>
-
-        <img src="longsleeve.png"
-             alt="Long Sleeve Performance Shirts"
-             class="shirt-img"
-             onclick="this.classList.toggle('zoomed')">
+        <div class="image-row">
+          <img src="shortsleevepolo_front.png" alt="Short Sleeve Polo Front" class="small-shirt-img" onclick="this.classList.toggle('zoomed')">
+          <img src="shortsleevepolo_back.png" alt="Short Sleeve Polo Back" class="small-shirt-img" onclick="this.classList.toggle('zoomed')">
+        </div>
 
         <div class="product-info">
-          <p>Lightweight performance material with added sleeve coverage for cooler mornings and sun protection.</p>
-          <p><strong>$24+</strong></p>
+          <p>Professional short sleeve polo made for clean business branding and everyday comfort.</p>
+          <p><strong>$25+</strong></p>
           <p><strong>5 minimum</strong></p>
         </div>
 
         <div class="color-area">
           <div class="color-label">Available Colors</div>
+          <select class="color-dropdown">
+            <option>Black</option>
+            <option>True Navy</option>
+            <option>Neon Green</option>
+            <option>White</option>
+            <option>Silver</option>
+            <option>Grey</option>
+            <option>True Red</option>
+            <option>Royal Blue</option>
+            <option>Gold</option>
+            <option>Maroon</option>
+          </select>
+        </div>
+      </div>
 
+      <a class="button" href="quote.html?product=shortsleevepolo">Request Quote</a>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h3>Long Sleeve Performance Shirts</h3>
+
+        <img src="longsleeve.png" alt="Long Sleeve Performance Shirts" class="shirt-img" onclick="this.classList.toggle('zoomed')">
+
+        <div class="product-info">
+          <p>Lightweight performance material with added sleeve coverage for cooler mornings and sun protection.</p>
+          <p><strong>$25+</strong></p>
+          <p><strong>5 minimum</strong></p>
+        </div>
+
+        <div class="color-area">
+          <div class="color-label">Available Colors</div>
           <select class="color-dropdown">
             <option>Military Green</option>
             <option>Royal</option>
@@ -296,33 +339,25 @@
             <option>Safety Yellow</option>
           </select>
         </div>
-
       </div>
 
-      <a class="button" href="quote.html?product=longsleeve">
-        Request Quote
-      </a>
+      <a class="button" href="quote.html?product=longsleeve">Request Quote</a>
     </div>
 
     <div class="card">
       <div class="card-content">
-
         <h3>Long Sleeve Polo</h3>
 
-        <img src="longsleevepolo.png"
-             alt="Long Sleeve Polo"
-             class="shirt-img"
-             onclick="this.classList.toggle('zoomed')">
+        <img src="longsleevepolo.png" alt="Long Sleeve Polo" class="shirt-img" onclick="this.classList.toggle('zoomed')">
 
         <div class="product-info">
           <p>Professional long sleeve polo built for comfort, durability, and clean business branding.</p>
-          <p><strong>$24+</strong></p>
+          <p><strong>$27+</strong></p>
           <p><strong>5 minimum</strong></p>
         </div>
 
         <div class="color-area">
           <div class="color-label">Available Colors</div>
-
           <select class="color-dropdown">
             <option>Black</option>
             <option>Gray</option>
@@ -333,23 +368,16 @@
             <option>Contact for available colors</option>
           </select>
         </div>
-
       </div>
 
-      <a class="button" href="quote.html?product=longsleevepolo">
-        Request Quote
-      </a>
+      <a class="button" href="quote.html?product=longsleevepolo">Request Quote</a>
     </div>
 
     <div class="card">
       <div class="card-content">
-
         <h3>Standard Cotton Shirts</h3>
 
-        <img src="shirt2.png"
-             alt="Standard Cotton Shirts"
-             class="shirt-img"
-             onclick="this.classList.toggle('zoomed')">
+        <img src="shirt2.png" alt="Standard Cotton Shirts" class="shirt-img" onclick="this.classList.toggle('zoomed')">
 
         <div class="product-info">
           <p>Durable everyday wear.</p>
@@ -359,7 +387,6 @@
 
         <div class="color-area">
           <div class="color-label">Available Colors</div>
-
           <select class="color-dropdown">
             <option>Black</option>
             <option>Red</option>
@@ -371,12 +398,45 @@
             <option>Military Green</option>
           </select>
         </div>
-
       </div>
 
-      <a class="button" href="quote.html?product=standard">
-        Request Quote
-      </a>
+      <a class="button" href="quote.html?product=standard">Request Quote</a>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h3>Custom Shirts</h3>
+
+        <div class="image-row">
+          <img src="customshirt_front.png" alt="Custom Shirt Front" class="small-shirt-img" onclick="this.classList.toggle('zoomed')">
+          <img src="customshirt_back.png" alt="Custom Shirt Back" class="small-shirt-img" onclick="this.classList.toggle('zoomed')">
+        </div>
+
+        <div class="product-info">
+          <p>Custom shirts available for smaller orders, events, personal designs, and business branding.</p>
+          <p><strong>$30+</strong></p>
+          <p><strong>1 minimum</strong></p>
+        </div>
+
+        <div class="color-area">
+          <div class="color-label">Available Colors</div>
+          <select class="color-dropdown">
+            <option>Sand</option>
+            <option>Blue</option>
+            <option>Red</option>
+            <option>Black</option>
+            <option>White</option>
+            <option>Grey</option>
+            <option>Safety Green</option>
+            <option>Military Green</option>
+            <option>Gold</option>
+            <option>Maroon</option>
+            <option>Safety Orange</option>
+          </select>
+        </div>
+      </div>
+
+      <a class="button" href="quote.html?product=customshirt">Request Quote</a>
     </div>
 
   </div>
@@ -389,52 +449,34 @@
 
     <div class="card">
       <div class="card-content">
-
         <h3>Performance Trucker Hats</h3>
 
-        <img src="performancetruckerhat.png"
-             alt="Performance Trucker Hats"
-             class="hat-img"
-             onclick="this.classList.toggle('zoomed')">
+        <img src="performancetruckerhat.png" alt="Performance Trucker Hats" class="hat-img" onclick="this.classList.toggle('zoomed')">
 
         <div class="product-info">
           <p>Available with DTF or Patch styles.</p>
-
           <p><strong>DTF: $25+ (5 min)</strong></p>
-
           <p><strong>Patch: $30+ (10 min)</strong></p>
         </div>
-
       </div>
 
-      <a class="button" href="quote.html?product=performancetruckerhat">
-        Request Quote
-      </a>
+      <a class="button" href="quote.html?product=performancetruckerhat">Request Quote</a>
     </div>
 
     <div class="card">
       <div class="card-content">
-
         <h3>Retro Trucker Hats</h3>
 
-        <img src="retrotruckerhat.png"
-             alt="Retro Trucker Hats"
-             class="hat-img"
-             onclick="this.classList.toggle('zoomed')">
+        <img src="retrotruckerhat.png" alt="Retro Trucker Hats" class="hat-img" onclick="this.classList.toggle('zoomed')">
 
         <div class="product-info">
           <p>Available with DTF or Patch styles.</p>
-
           <p><strong>DTF: $22+ (5 min)</strong></p>
-
-          <p><strong>Patch: $27+ (10 min)</strong></p>
+          <p><strong>Patch: $30+ (10 min)</strong></p>
         </div>
-
       </div>
 
-      <a class="button" href="quote.html?product=retrotruckerhat">
-        Request Quote
-      </a>
+      <a class="button" href="quote.html?product=retrotruckerhat">Request Quote</a>
     </div>
 
   </div>
