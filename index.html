@@ -250,7 +250,8 @@
     }
 
     .trusted { 
-      background: #fff; 
+      background: #e66a00;
+      color: #fff;
       max-width: none; 
       padding-top: 26px;
       padding-bottom: 24px;
@@ -262,12 +263,14 @@
     }
 
     .trusted .section-title {
+      color: #fff;
       margin-bottom: 16px;
     }
 
     .trusted .work-link {
       display: inline-block;
       margin-top: 4px;
+      color: #fff;
     }
     .logo-row {
       display: grid;
@@ -286,14 +289,22 @@
       display: block;
     }
     .work-link {
-      color: #e25300;
+      color: #fff;
       text-decoration: none;
       font-weight: 900;
       text-transform: uppercase;
       font-size: 0.85rem;
     }
 
-    .products { background: linear-gradient(180deg, #fff 0%, #f7f3ec 100%); max-width: none; }
+    .products { 
+      background: linear-gradient(180deg, #5a2400 0%, #6d2b00 50%, #4a1d00 100%); 
+      max-width: none; 
+      color: #fff;
+    }
+
+    .products .section-title {
+      color: #fff;
+    }
     .products-inner { max-width: 1250px; margin: 0 auto; }
     .product-grid {
       display: grid;
@@ -383,6 +394,19 @@
     .steps h3 { margin: 0 0 5px; text-transform: uppercase; font-size: 0.9rem; }
     .steps p { margin: 0; font-size: 0.86rem; color: #e8e8e8; }
     .num { color: #ff7900; }
+
+
+    .gallery-section {
+      background: linear-gradient(180deg, #5a2400 0%, #6d2b00 50%, #4a1d00 100%);
+      max-width: none;
+      color: #fff;
+    }
+
+    .gallery-section .section-title,
+    .gallery-section h3,
+    .gallery-section p {
+      color: #fff;
+    }
 
     .gallery-grid {
       display: grid;
@@ -621,7 +645,7 @@
     </div>
   </section>
 
-  <section class="section" id="gallery">
+  <section class="section gallery-section" id="gallery">
     <h2 class="section-title">Our Work in Action</h2>
     <div class="gallery-grid">
       <figure class="gallery-item">
