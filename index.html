@@ -249,45 +249,77 @@
       margin: 0 14px;
     }
 
-    .trusted { 
-      background: #e66a00;
+    .trusted {
+      background: linear-gradient(180deg, #c54f00 0%, #e66a00 50%, #c54f00 100%);
       color: #fff;
-      max-width: none; 
-      padding-top: 26px;
-      padding-bottom: 24px;
+      max-width: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
-    .trusted-inner { 
-      max-width: 1500px; 
-      margin: 0 auto; 
-      text-align: center; 
+
+    .trusted-inner {
+      max-width: 1500px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     .trusted .section-title {
       color: #fff;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
+    }
+
+    .trusted .section-title::before,
+    .trusted .section-title::after {
+      background: #ff8a00;
     }
 
     .trusted .work-link {
       display: inline-block;
-      margin-top: 4px;
+      margin-top: 0;
       color: #fff;
+      font-weight: 900;
+      text-transform: uppercase;
     }
+
     .logo-row {
       display: grid;
-      grid-template-columns: repeat(3, minmax(360px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(3, minmax(320px, 1fr));
+      gap: 20px;
       align-items: center;
-      margin-bottom: 14px;
+      margin-bottom: 2px;
     }
-    .client-logo {
-      max-width: 900px;
-      max-height: 420px;
+
+    .logo-panel {
+      background: #000;
+      padding: 12px;
+      border-radius: 8px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      min-height: 170px;
       width: 100%;
-      height: auto;
+      max-width: 380px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    }
+
+    .client-logo {
+      width: 100%;
+      max-width: 330px;
+      max-height: 150px;
       object-fit: contain;
       margin: 0 auto;
       display: block;
     }
+
+    .logo-safe .client-logo {
+      max-width: 270px;
+    }
+
+    .logo-queen .client-logo {
+      max-width: 340px;
+    }
+
     .work-link {
       color: #fff;
       text-decoration: none;
@@ -318,7 +350,13 @@
       padding: 22px 18px 18px;
       position: relative;
       overflow: hidden;
-      border-radius: 4px;
+      border-radius: 10px;
+      border: 6px solid #dd6f12;
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
     }
     .badge {
       position: absolute;
@@ -416,13 +454,17 @@
     .gallery-item { text-align: center; }
     .gallery-item img {
       width: 100%;
-      height: 160px;
-      object-fit: cover;
+      height: 260px;
+      object-fit: contain;
+      background: rgba(0,0,0,0.18);
+      padding: 8px;
+      border-radius: 10px;
+      border: 4px solid #dd6f12;
       display: block;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
       cursor: pointer;
     }
-    .gallery-item h3 { margin: 10px 0 0; font-size: 0.95rem; }
+    .gallery-item h3 { margin: 12px 0 0; font-size: 0.95rem; }
     .gallery-item p { margin: 0; font-size: 0.85rem; }
 
     .reviews { background: #0a0a0a; color: #fff; max-width: none; }
@@ -516,9 +558,12 @@
       .cta-actions { margin-top: 18px; min-width: 0; }
       .footer-grid { grid-template-columns: 1fr; text-align: center; }
       .enlarged, .zoomed { transform: scale(1.25); }
-      .trusted { padding-top: 24px; padding-bottom: 22px; }
-      .trusted .section-title { margin-bottom: 16px; }
-      .client-logo { max-width: 360px; max-height: 220px; }
+      .trusted { padding-top: 12px; padding-bottom: 12px; }
+      .trusted .section-title { margin-bottom: 8px; }
+      .logo-panel { max-width: 340px; min-height: 155px; }
+      .client-logo { max-width: 300px; max-height: 135px; }
+      .logo-safe .client-logo { max-width: 260px; }
+      .logo-queen .client-logo { max-width: 300px; }
     }
   </style>
 </head>
@@ -541,7 +586,6 @@
     <div class="nav-links">
       <a class="active" href="index.html">Home</a>
       <a href="products.html">Products</a>
-
       <a href="#reviews">Reviews</a>
       <a href="quote.html">Get Quote</a>
     </div>
@@ -580,9 +624,15 @@
     <div class="trusted-inner">
       <h2 class="section-title">Trusted by Arizona Businesses</h2>
       <div class="logo-row">
-        <img class="client-logo" src="safe-shield-logo.png" alt="Safe Shield Pest Solutions logo" />
-        <img class="client-logo" src="az-demolition-logo.png" alt="AZ Demolition and Landscaping logo" />
-        <img class="client-logo" src="queen-creek-logo.png" alt="Queen Creek Irrigation and Sprinkler logo" />
+        <div class="logo-panel logo-safe">
+          <img class="client-logo" src="safe-shield-logo.png" alt="Safe Shield Pest Solutions logo" />
+        </div>
+        <div class="logo-panel logo-az">
+          <img class="client-logo" src="az-demolition-logo.png" alt="AZ Demolition and Landscaping logo" />
+        </div>
+        <div class="logo-panel logo-queen">
+          <img class="client-logo" src="queen-creek-logo.png" alt="Queen Creek Irrigation and Sprinkler logo" />
+        </div>
       </div>
       <a class="work-link" href="#gallery">View more of our work →</a>
     </div>
@@ -649,15 +699,15 @@
     <h2 class="section-title">Our Work in Action</h2>
     <div class="gallery-grid">
       <figure class="gallery-item">
-        <img src="photo1.jpg" alt="Safe Shield Pest Solutions custom apparel" onclick="this.classList.toggle('enlarged')" />
+        <img src="Safeshield-action.png" alt="Safe Shield Pest Solutions custom apparel" onclick="this.classList.toggle('enlarged')" />
         <figcaption><h3>Safe Shield Pest Solutions</h3><p>Performance Shirts & Hats</p></figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="photo2.jpg" alt="AZ Demolition and Landscaping custom apparel" onclick="this.classList.toggle('enlarged')" />
+        <img src="photo3.jpg" alt="AZ Demolition and Landscaping custom apparel" onclick="this.classList.toggle('enlarged')" />
         <figcaption><h3>AZ Demolition & Landscaping</h3><p>Work Shirts Built for Tough Jobs</p></figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="photo3.jpg" alt="Queen Creek Irrigation custom apparel" onclick="this.classList.toggle('enlarged')" />
+        <img src="Queencreek-action.png" alt="Queen Creek Irrigation custom apparel" onclick="this.classList.toggle('enlarged')" />
         <figcaption><h3>Queen Creek Irrigation</h3><p>Custom Gear for the Heat</p></figcaption>
       </figure>
     </div>
