@@ -630,7 +630,7 @@
         name: "Performance Work Shirts",
         price: "27",
         description: "Lightweight, breathable performance shirts built for Arizona heat and tough job sites.",
-        images: ["shirt1.png", "shirt1.png", "shirt1.png", "shirt1.png"],
+        images: ["performance-work-shirt-black.png", "performance-work-shirt-red.png", "performance-work-shirt-silver.png", "performance-work-shirt-true-navy.png"],
         quoteProduct: "performance",
         features: [
           "Lightweight performance material",
@@ -640,14 +640,11 @@
           "Low minimum order options"
         ],
         colors: [
-          { name: "Red", hex: "#c42121" },
-          { name: "Neon Orange", hex: "#ff6500" },
-          { name: "Aluminum", hex: "#b8b8b8" },
-          { name: "Black", hex: "#050505" },
-          { name: "Royal", hex: "#174fb7" },
-          { name: "Safety Green", hex: "#c7ff1a" },
-          { name: "Medium Grey", hex: "#666666" },
-          { name: "Olive", hex: "#55613f" }
+          { name: "Black", hex: "#050505", image: "performance-work-shirt-black.png" },
+          { name: "Red", hex: "#c42121", image: "performance-work-shirt-red.png" },
+          { name: "Silver", hex: "#b8b8b8", image: "performance-work-shirt-silver.png" },
+          { name: "True Navy", hex: "#0d2342", image: "performance-work-shirt-true-navy.png" },
+          { name: "True Royal", hex: "#174fb7", image: "performance-work-shirt-true-royal.png" }
         ]
       },
 
@@ -655,7 +652,12 @@
         name: "Long Sleeve Performance",
         price: "24",
         description: "Lightweight long sleeve performance shirts with extra coverage for sun protection and outdoor crews.",
-        images: ["longsleeve.png", "longsleeve.png", "longsleeve.png", "longsleeve.png"],
+        images: [
+          "long-sleeve-performance-black.png",
+          "long-sleeve-performance-coyote-brown.png",
+          "long-sleeve-performance-true-royal.png",
+          "long-sleeve-performance-green.png"
+        ],
         quoteProduct: "longsleeve",
         features: [
           "Lightweight performance material",
@@ -665,13 +667,15 @@
           "Low minimum order options"
         ],
         colors: [
-          { name: "Military Green", hex: "#55613f" },
-          { name: "Royal", hex: "#174fb7" },
-          { name: "Graphite", hex: "#333333" },
-          { name: "Silver", hex: "#b8b8b8" },
-          { name: "Black", hex: "#050505" },
-          { name: "Safety Orange", hex: "#ff6500" },
-          { name: "Safety Yellow", hex: "#d8ff00" }
+          { name: "Black", hex: "#050505", image: "long-sleeve-performance-black.png" },
+          { name: "Coyote Brown", hex: "#9b6b3d", image: "long-sleeve-performance-coyote-brown.png" },
+          { name: "True Royal", hex: "#174fb7", image: "long-sleeve-performance-true-royal.png" },
+          { name: "Military Green", hex: "#55613f", image: "long-sleeve-performance-green.png" },
+          { name: "Iron Grey", hex: "#5f6469", image: "long-sleeve-performance-iron-grey.png" },
+          { name: "Neon Yellow", hex: "#d8ff00", image: "long-sleeve-performance-neon-yellow.png" },
+          { name: "Silver", hex: "#c6c6c6", image: "long-sleeve-performance-silver.png" },
+          { name: "True Blue", hex: "#0d2342", image: "long-sleeve-performance-true-blue.png" },
+          { name: "True Red", hex: "#c42121", image: "long-sleeve-performance-true-red.png" }
         ]
       },
 
@@ -679,7 +683,12 @@
         name: "Standard Cotton Shirts",
         price: "22",
         description: "Durable everyday shirts for crews, events, and business branding.",
-        images: ["shirt2.png", "shirt2.png", "shirt2.png", "shirt2.png"],
+        images: [
+          "standard-cotton-black.png",
+          "standard-cotton-heavy-grey.png",
+          "standard-cotton-military-green.png",
+          "standard-cotton-orange.png"
+        ],
         quoteProduct: "standard",
         features: [
           "Durable cotton feel",
@@ -689,14 +698,13 @@
           "Low minimum order options"
         ],
         colors: [
-          { name: "Black", hex: "#050505" },
-          { name: "Red", hex: "#c42121" },
-          { name: "Sand", hex: "#c8b48a" },
-          { name: "Safety Green", hex: "#c7ff1a" },
-          { name: "Royal Blue", hex: "#174fb7" },
-          { name: "Navy Blue", hex: "#0d2342" },
-          { name: "Charcoal", hex: "#333333" },
-          { name: "Military Green", hex: "#55613f" }
+          { name: "Black", hex: "#050505", image: "standard-cotton-black.png" },
+          { name: "Heavy Grey", hex: "#555555", image: "standard-cotton-heavy-grey.png" },
+          { name: "Military Green", hex: "#55613f", image: "standard-cotton-military-green.png" },
+          { name: "Orange", hex: "#ff6500", image: "standard-cotton-orange.png" },
+          { name: "Red", hex: "#c42121", image: "standard-cotton-red.png" },
+          { name: "Royal Blue", hex: "#174fb7", image: "standard-cotton-royal-blue.png" },
+          { name: "Sand", hex: "#d6c095", image: "standard-cotton-sand.png" }
         ]
       },
 
@@ -834,6 +842,12 @@
         swatch.type = "button";
         swatch.addEventListener("click", () => {
           selectedColor.textContent = color.name;
+
+          if (color.image) {
+            mainImage.src = color.image;
+            mainImage.alt = product.name + " - " + color.name;
+          }
+
           document.querySelectorAll(".color-swatch").forEach(s => s.classList.remove("active"));
           swatch.classList.add("active");
         });
