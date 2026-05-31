@@ -360,19 +360,23 @@
       gap: 24px;
     }
     .product-card {
-      background: #fff;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      background:
+        radial-gradient(circle at top, rgba(255,121,0,0.18), transparent 38%),
+        linear-gradient(180deg, #552000 0%, #321200 55%, #160800 100%);
+      color: #fff;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.28);
       text-align: center;
       padding: 22px 18px 18px;
       position: relative;
       overflow: hidden;
-      border-radius: 10px;
+      border-radius: 14px;
       border: 6px solid #dd6f12;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .product-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
+      box-shadow: 0 22px 38px rgba(0,0,0,0.32);
     }
     .badge {
       position: absolute;
@@ -386,11 +390,17 @@
       text-transform: uppercase;
     }
     .product-card img {
-      height: 150px;
+      height: 180px;
       width: 100%;
       object-fit: contain;
       margin: 8px 0 12px;
       cursor: pointer;
+      filter: drop-shadow(0 12px 14px rgba(0,0,0,0.38));
+      transition: transform 0.25s ease;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.03);
     }
     .swatches {
       display: flex;
@@ -411,10 +421,11 @@
       font-size: 0.98rem;
       line-height: 1.1;
       font-weight: 1000;
+      color: #fff;
     }
     .price {
       margin: 4px 0 0;
-      color: #e25300;
+      color: #ff7900;
       font-weight: 1000;
       text-transform: uppercase;
       font-size: 0.95rem;
@@ -424,11 +435,16 @@
       font-size: 0.78rem;
       font-weight: 900;
       text-transform: uppercase;
+      color: #fff;
     }
     .product-card .btn { width: 100%; min-height: 40px; padding: 10px 14px; font-size: 0.75rem; }
     .center { text-align: center; }
     .view-all { margin-top: 28px; }
-    .view-all .btn { background: #fff; color: #e25300; box-shadow: none; }
+    .view-all .btn {
+      background: linear-gradient(180deg, #ff7a00, #e25300);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+    }
 
     .dark-section {
       background: #080808;
