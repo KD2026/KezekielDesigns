@@ -53,7 +53,7 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 4px;
       text-decoration: none;
       min-width: 340px;
     }
@@ -88,7 +88,7 @@
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      margin-top: 6px;
+      margin-top: 5px;
       white-space: nowrap;
     }
 
@@ -118,9 +118,9 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      min-height: 48px;
-      padding: 14px 24px;
+      gap: 4px;
+      min-height: 42px;
+      padding: 11px 22px;
       background: linear-gradient(180deg, #ff7a00, #e25300);
       color: #fff;
       text-decoration: none;
@@ -240,7 +240,7 @@
         linear-gradient(180deg, #552000 0%, #321200 55%, #160800 100%);
       color: #fff;
       border-radius: 12px 12px 0 0;
-      padding: 16px 20px;
+      padding: 10px 14px;
       box-shadow: 0 18px 40px rgba(0,0,0,0.34);
       border: 3px solid rgba(0,0,0,0.75);
       border-bottom: none;
@@ -263,9 +263,10 @@
 
     .quote-image-side img {
       width: 100%;
-      height: 430px;
-      object-fit: cover;
-      object-position: center;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+      object-position: center top;
       display: block;
       background: #000;
     }
@@ -273,14 +274,14 @@
     .top-upload-box {
       background: rgba(255,255,255,0.035);
       border: 1px dashed rgba(255,121,0,0.75);
-      border-radius: 7px;
+      border-radius: 5px;
       padding: 16px;
       color: #fff;
       min-height: 126px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 8px;
+      gap: 4px;
     }
 
     .top-upload-box strong {
@@ -293,7 +294,7 @@
       background: transparent;
       color: #fff;
       border: 1px solid rgba(255,255,255,0.22);
-      padding: 9px;
+      padding: 5px;
       margin-top: 0;
     }
 
@@ -303,7 +304,7 @@
     }
 
     .section-heading {
-      margin: 0 0 14px;
+      margin: 0 0 8px;
       text-transform: uppercase;
       font-size: clamp(1.35rem, 2.2vw, 1.95rem);
       line-height: 1;
@@ -317,20 +318,20 @@
       height: 3px;
       background: #ff7900;
       display: block;
-      margin-top: 6px;
+      margin-top: 5px;
     }
 
-    form { margin-top: 6px; }
+    form { margin-top: 5px; }
 
     .form-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 8px;
+      gap: 4px;
     }
 
     label {
       font-weight: 900;
-      font-size: 0.84rem;
+      font-size: 0.78rem;
     }
 
     .required { color: #e25300; }
@@ -342,7 +343,7 @@
     select,
     textarea {
       width: 100%;
-      padding: 9px;
+      padding: 5px;
       margin-top: 5px;
       border: 1px solid #cfcfcf;
       border-radius: 4px;
@@ -353,13 +354,13 @@
 
     textarea { resize: vertical; }
 
-    .form-block { margin-top: 6px; }
+    .form-block { margin-top: 5px; }
 
     .checkbox-columns {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 8px;
-      margin-top: 8px;
+      gap: 4px;
+      margin-top: 4px;
     }
 
     .check-list {
@@ -370,35 +371,35 @@
     .check-list label,
     .inline-check {
       display: flex;
-      gap: 8px;
+      gap: 4px;
       align-items: center;
       font-weight: 800;
       background: rgba(255,255,255,0.035);
       border: 2px solid rgba(0,0,0,0.7);
       color: #fff;
       border-radius: 5px;
-      padding: 8px 10px;
+      padding: 4px 6px;
     }
 
     .quantity-grid {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 6px;
+      gap: 4px;
+      margin-top: 5px;
     }
 
     .sizes-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 6px;
+      gap: 4px;
+      margin-top: 5px;
     }
 
     .hat-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 6px;
+      gap: 4px;
+      margin-top: 5px;
     }
 
     .mini-box {
@@ -406,16 +407,16 @@
       box-shadow: inset 0 0 0 1px rgba(255,121,0,0.15);
       background: rgba(255,255,255,0.035);
       border: 2px solid rgba(0,0,0,0.7);
-      border-radius: 7px;
-      padding: 9px;
+      border-radius: 5px;
+      padding: 5px;
       color: #fff;
     }
 
     .size-check-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 8px;
-      margin-top: 8px;
+      gap: 4px;
+      margin-top: 4px;
     }
 
     .size-check-grid label {
@@ -425,7 +426,7 @@
       background: rgba(255,255,255,0.035);
       border: 2px solid rgba(0,0,0,0.7);
       border-radius: 6px;
-      padding: 7px 8px;
+      padding: 6px 7px;
       font-weight: 800;
       color: #fff;
     }
@@ -434,21 +435,21 @@
       background: rgba(255,121,0,0.10);
       border: 3px solid rgba(0,0,0,0.75);
       border-radius: 8px;
-      padding: 10px 12px;
+      padding: 4px 6px;
       font-weight: 850;
-      margin: 0 0 14px;
+      margin: 0 0 8px;
       color: #fff;
     }
 
     .file-note {
       color: #666;
       font-size: 0.78rem;
-      margin-top: 8px;
+      margin-top: 4px;
       font-weight: 700;
     }
 
     .submit-row {
-      margin-top: 22px;
+      margin-top: 12px;
     }
 
     .submit-row .button {
@@ -458,7 +459,7 @@
     }
 
     .secure {
-      margin-top: 6px;
+      margin-top: 5px;
       color: #666;
       font-size: 0.82rem;
       text-align: center;
@@ -474,7 +475,7 @@
     .why-item {
       display: grid;
       grid-template-columns: 54px 1fr;
-      gap: 8px;
+      gap: 4px;
       align-items: start;
     }
 
@@ -609,7 +610,7 @@
 
     footer p,
     footer a {
-      font-size: 0.84rem;
+      font-size: 0.78rem;
       color: #e8e8e8;
       text-decoration: none;
       margin: 0 0 6px;
@@ -619,7 +620,7 @@
     .copyright {
       text-align: center;
       color: #bdbdbd;
-      margin-top: 22px;
+      margin-top: 12px;
       font-size: 0.78rem;
     }
 
@@ -869,78 +870,9 @@
             </div>
           </div>
 
-          <div class="sizes-grid">
-            <div class="mini-box">
-              <label>Performance Shirt Sizes</label>
-              <div class="size-check-grid">
-                <label><input type="checkbox" name="performance_sizes[]" value="S" /> S</label>
-                <label><input type="checkbox" name="performance_sizes[]" value="M" /> M</label>
-                <label><input type="checkbox" name="performance_sizes[]" value="L" /> L</label>
-                <label><input type="checkbox" name="performance_sizes[]" value="XL" /> XL</label>
-                <label><input type="checkbox" name="performance_sizes[]" value="2XL" /> 2XL</label>
-                <label><input type="checkbox" name="performance_sizes[]" value="3XL" /> 3XL</label>
-              </div>
-            </div>
-
-            <div class="mini-box">
-              <label>Long Sleeve Performance Sizes</label>
-              <div class="size-check-grid">
-                <label><input type="checkbox" name="longsleeve_sizes[]" value="S" /> S</label>
-                <label><input type="checkbox" name="longsleeve_sizes[]" value="M" /> M</label>
-                <label><input type="checkbox" name="longsleeve_sizes[]" value="L" /> L</label>
-                <label><input type="checkbox" name="longsleeve_sizes[]" value="XL" /> XL</label>
-                <label><input type="checkbox" name="longsleeve_sizes[]" value="2XL" /> 2XL</label>
-                <label><input type="checkbox" name="longsleeve_sizes[]" value="3XL" /> 3XL</label>
-              </div>
-            </div>
-
-            <div class="mini-box">
-              <label>Long Sleeve Polo Sizes</label>
-              <div class="size-check-grid">
-                <label><input type="checkbox" name="longsleevepolo_sizes[]" value="S" /> S</label>
-                <label><input type="checkbox" name="longsleevepolo_sizes[]" value="M" /> M</label>
-                <label><input type="checkbox" name="longsleevepolo_sizes[]" value="L" /> L</label>
-                <label><input type="checkbox" name="longsleevepolo_sizes[]" value="XL" /> XL</label>
-                <label><input type="checkbox" name="longsleevepolo_sizes[]" value="2XL" /> 2XL</label>
-                <label><input type="checkbox" name="longsleevepolo_sizes[]" value="3XL" /> 3XL</label>
-              </div>
-            </div>
-
-            <div class="mini-box">
-              <label>Standard Cotton Shirt Sizes</label>
-              <div class="size-check-grid">
-                <label><input type="checkbox" name="standard_sizes[]" value="S" /> S</label>
-                <label><input type="checkbox" name="standard_sizes[]" value="M" /> M</label>
-                <label><input type="checkbox" name="standard_sizes[]" value="L" /> L</label>
-                <label><input type="checkbox" name="standard_sizes[]" value="XL" /> XL</label>
-                <label><input type="checkbox" name="standard_sizes[]" value="2XL" /> 2XL</label>
-                <label><input type="checkbox" name="standard_sizes[]" value="3XL" /> 3XL</label>
-              </div>
-            </div>
-
-            <div class="mini-box">
-              <label>Short Sleeve Polo Sizes</label>
-              <div class="size-check-grid">
-                <label><input type="checkbox" name="shortsleevepolo_sizes[]" value="S" /> S</label>
-                <label><input type="checkbox" name="shortsleevepolo_sizes[]" value="M" /> M</label>
-                <label><input type="checkbox" name="shortsleevepolo_sizes[]" value="L" /> L</label>
-                <label><input type="checkbox" name="shortsleevepolo_sizes[]" value="XL" /> XL</label>
-                <label><input type="checkbox" name="shortsleevepolo_sizes[]" value="2XL" /> 2XL</label>
-                <label><input type="checkbox" name="shortsleevepolo_sizes[]" value="3XL" /> 3XL</label>
-              </div>
-            </div>
-
-            <div class="mini-box">
-              <label>Custom Shirt Sizes</label>
-              <div class="size-check-grid">
-                <label><input type="checkbox" name="customshirt_sizes[]" value="S" /> S</label>
-                <label><input type="checkbox" name="customshirt_sizes[]" value="M" /> M</label>
-                <label><input type="checkbox" name="customshirt_sizes[]" value="L" /> L</label>
-                <label><input type="checkbox" name="customshirt_sizes[]" value="XL" /> XL</label>
-                <label><input type="checkbox" name="customshirt_sizes[]" value="2XL" /> 2XL</label>
-                <label><input type="checkbox" name="customshirt_sizes[]" value="3XL" /> 3XL</label>
-              </div>
-            </div>
+          <div class="size-range-note">
+            <strong>Shirt sizes available:</strong> Small through 3XL.
+            <span>Use the project details box below to tell us how many of each size you need.</span>
           </div>
 
           <div class="hat-grid">
@@ -962,7 +894,7 @@
 
           <div class="form-block">
             <label for="details">Tell us about your project <span class="required">*</span></label>
-            <textarea id="details" name="details" rows="6" placeholder="Include logo colors, placement, shirt sizes, hat style, deadline, and any special requests." required></textarea>
+            <textarea id="details" name="details" rows="3" placeholder="Include logo colors, placement, shirt sizes, hat style, deadline, and any special requests." required></textarea>
           </div>
 
           <input type="hidden" name="_subject" value="New Quote Request - Kezekiel Designs" />
