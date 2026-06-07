@@ -441,6 +441,24 @@
       color: #fff;
     }
 
+    .size-range-note {
+      margin-top: 6px;
+      padding: 8px 10px;
+      border: 2px solid rgba(0,0,0,0.7);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.045);
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .size-range-note span {
+      display: block;
+      color: #e8e8e8;
+      font-size: 0.76rem;
+      margin-top: 2px;
+    }
+
     .file-note {
       color: #666;
       font-size: 0.78rem;
@@ -624,36 +642,51 @@
       font-size: 0.78rem;
     }
 
-    @media (max-width: 1200px) {
-      .form-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* ===== Phone / tablet quote page fixes ===== */
+    @media (max-width: 900px) {
+      body {
+        overflow-x: hidden;
       }
 
-      .checkbox-columns {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .top-bar {
+        justify-content: center;
+        text-align: center;
+        font-size: 0.66rem;
+        line-height: 1.3;
+        padding: 7px 4%;
       }
 
-      .quantity-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .sizes-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 980px) {
       .nav {
+        position: relative;
         min-height: auto;
+        padding: 10px 4% 12px;
+        gap: 10px;
         flex-wrap: wrap;
-        padding-top: 10px;
-        padding-bottom: 14px;
+        justify-content: center;
       }
 
-      .brand { min-width: 0; justify-content: center; }
-      .brand img { width: 135px; margin: 0; }
-      .brand-name { font-size: 1.05rem; }
-      .brand-tagline { font-size: 0.72rem; }
+      .brand {
+        width: 100%;
+        min-width: 0;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .brand img {
+        width: 112px;
+        max-height: 90px;
+        margin: 0;
+      }
+
+      .brand-name {
+        font-size: 0.98rem;
+        white-space: normal;
+      }
+
+      .brand-tagline {
+        font-size: 0.66rem;
+        white-space: normal;
+      }
 
       .nav-links {
         order: 3;
@@ -661,62 +694,296 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 18px;
+        font-size: 0.74rem;
       }
 
-      .nav-links a { padding: 8px 0; }
+      .nav-links a {
+        padding: 6px 0;
+      }
 
-      .hero-inner,
-      .main-wrap,
-      .rush {
+      .nav > .btn {
+        display: none;
+      }
+
+      .hero-inner {
+        padding: 22px 5% 16px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2.35rem;
+        letter-spacing: -1px;
+      }
+
+      .hero h2 {
+        font-size: 1rem;
+        margin: 8px 0;
+      }
+
+      .hero p {
+        font-size: 0.82rem;
+        line-height: 1.35;
+        max-width: 440px;
+        margin: 0 auto;
+      }
+
+      .main-section {
+        padding: 14px 10px 24px;
+      }
+
+      .form-card {
+        padding: 12px 10px;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .section-heading {
+        font-size: 1.18rem;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+
+      .section-heading::after {
+        margin: 6px auto 0;
+        width: 64px;
+      }
+
+      .note {
+        font-size: 0.72rem;
+        line-height: 1.35;
+        padding: 7px 8px;
+        margin-bottom: 8px;
+      }
+
+      form {
+        margin-top: 6px;
+      }
+
+      .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+      }
+
+      label {
+        font-size: 0.68rem;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="file"],
+      select,
+      textarea {
+        padding: 7px;
+        margin-top: 3px;
+        font-size: 0.78rem;
+      }
+
+      .form-block {
+        margin-top: 8px;
+      }
+
+      .checkbox-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+      }
+
+      .check-list {
+        gap: 6px;
+      }
+
+      .check-list label,
+      .inline-check {
+        padding: 7px;
+        font-size: 0.68rem;
+        line-height: 1.15;
+      }
+
+      .checkbox-columns .check-list:last-child {
+        grid-column: span 2;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .top-upload-box {
+        min-height: 82px;
+        padding: 8px;
+        gap: 4px;
+      }
+
+      .top-upload-box strong {
+        font-size: 0.72rem;
+      }
+
+      .top-upload-box small {
+        font-size: 0.62rem;
+        line-height: 1.25;
+      }
+
+      .top-upload-box input[type="file"] {
+        padding: 5px;
+        font-size: 0.62rem;
+      }
+
+      .quantity-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+        margin-top: 8px;
+      }
+
+      .mini-box {
+        padding: 7px;
+        border-radius: 6px;
+      }
+
+      .size-range-note {
+        font-size: 0.72rem;
+        line-height: 1.3;
+        padding: 7px;
+      }
+
+      .size-range-note span {
+        font-size: 0.66rem;
+      }
+
+      .hat-grid {
         grid-template-columns: 1fr;
+        gap: 7px;
+        margin-top: 8px;
+      }
+
+      textarea {
+        rows: 3;
+        min-height: 78px;
+      }
+
+      .submit-row {
+        margin-top: 10px;
+      }
+
+      .submit-row .button {
+        min-height: 42px;
+        font-size: 0.82rem;
+        padding: 10px;
+      }
+
+      .secure {
+        font-size: 0.68rem;
+        color: #dedede;
+      }
+
+      .side-card {
+        padding: 0;
       }
 
       .quote-image-side {
-        position: relative;
-        top: auto;
-        border-top: 3px solid #ff7900;
+        border-radius: 0 0 12px 12px;
+      }
+
+      .quote-image-side img {
+        width: 100%;
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+      }
+
+      .rush {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding-top: 18px;
+        margin-top: 18px;
       }
 
       .rush-card {
         border-right: none;
-        padding-right: 0;
+        padding: 12px;
+        grid-template-columns: 42px 1fr;
+        gap: 10px;
+        background: rgba(0,0,0,0.22);
+        border-radius: 10px;
       }
 
-      .hero-visual { max-width: 700px; }
+      .rush-icon {
+        font-size: 2rem;
+      }
+
+      .rush h2 {
+        font-size: 1rem;
+      }
+
+      .rush p {
+        font-size: 0.76rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 14px;
+      }
     }
 
-    @media (max-width: 680px) {
-      .top-bar { justify-content: center; text-align: center; }
+    @media (max-width: 430px) {
+      .brand {
+        flex-direction: column;
+        text-align: center;
+      }
 
-      .nav { justify-content: center; }
-      .brand { width: 100%; }
-      .brand-text { align-items: flex-start; }
-      .nav > .btn { width: 100%; }
+      .brand-text {
+        align-items: center;
+      }
 
-      .hero-inner { padding: 42px 6% 36px; }
-      .hero h1 { letter-spacing: -1px; }
+      .brand img {
+        width: 104px;
+      }
 
-      .hero-visual,
+      .nav-links {
+        gap: 16px;
+        font-size: 0.7rem;
+      }
+
+      .hero h1 {
+        font-size: 2.05rem;
+      }
+
+      .hero p {
+        font-size: 0.78rem;
+      }
+
       .form-grid,
-      .checkbox-columns,
-      .quantity-grid,
-      .sizes-grid,
-      .hat-grid,
-      .footer-grid {
+      .quantity-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .checkbox-columns {
         grid-template-columns: 1fr;
       }
 
-      .visual-card img { height: 170px; }
-      .form-card { padding: 22px 16px; }
-      .size-check-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .section-heading { font-size: 1.45rem; }
+      .checkbox-columns .check-list:last-child {
+        grid-column: span 1;
+        grid-template-columns: 1fr;
+      }
+
+      .check-list label {
+        font-size: 0.66rem;
+      }
+
+      .mini-box label {
+        font-size: 0.62rem;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="file"],
+      select,
+      textarea {
+        font-size: 0.74rem;
+      }
+
       .quote-image-side img {
-        width: 100%;
-        height: auto;
-        max-height: none;
-        object-fit: contain;
+        max-height: 360px;
       }
     }
+
+
   </style>
 </head>
 
@@ -738,7 +1005,6 @@
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="products.html">Products</a>
-      <a href="index.html#gallery">Our Work</a>
       <a class="active" href="quote.html">Get Quote</a>
     </div>
 
@@ -941,7 +1207,6 @@
         <h3>Quick Links</h3>
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
-        <a href="index.html#gallery">Our Work</a>
         <a href="quote.html">Get Quote</a>
       </div>
 
