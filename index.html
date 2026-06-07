@@ -555,50 +555,236 @@
 
     .enlarged, .zoomed { transform: scale(1.8); z-index: 50; position: relative; transition: transform 0.25s ease; }
 
-    @media (max-width: 980px) {
-      .nav { min-height: auto; flex-wrap: wrap; padding-top: 10px; padding-bottom: 14px; }
-      .brand { min-width: 0; justify-content: center; }
-      .brand img { width: 135px; margin: 0; }
-      .brand-name { font-size: 1.05rem; }
-      .brand-tagline { font-size: 0.72rem; }
-      .nav-links { order: 3; width: 100%; justify-content: center; flex-wrap: wrap; gap: 18px; }
-      .nav-links a { padding: 8px 0; }
-      .benefits-grid, .product-grid, .steps, .review-grid { grid-template-columns: repeat(2, 1fr); }
-      .benefit:nth-child(2) { border-right: none; }
-      .logo-row {
-        grid-template-columns: repeat(3, minmax(220px, 1fr));
-        gap: 24px;
+    /* ===== Mobile polish for phones/tablets ===== */
+    @media (max-width: 900px) {
+      body { overflow-x: hidden; }
+
+      .top-bar {
+        font-size: 0.68rem;
+        line-height: 1.35;
+        padding: 8px 4%;
+        justify-content: center;
+        text-align: center;
       }
-      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .nav {
+        position: relative;
+        min-height: auto;
+        padding: 12px 4% 14px;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .brand {
+        width: 100%;
+        min-width: 0;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .brand img {
+        width: 120px;
+        max-height: 95px;
+        margin: 0;
+      }
+
+      .brand-name {
+        font-size: 1rem;
+        white-space: normal;
+      }
+
+      .brand-tagline {
+        font-size: 0.68rem;
+        white-space: normal;
+      }
+
+      .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+        font-size: 0.72rem;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a { padding: 6px 0; }
+
+      .nav > .btn {
+        width: 100%;
+        min-height: 42px;
+        padding: 10px 14px;
+      }
+
+      .hero-inner { padding: 8px 0; }
+
+      .hero-banner-img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: contain;
+      }
+
+      .benefits { padding: 18px 5%; }
+
+      .benefits-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .benefit {
+        grid-template-columns: 34px 1fr;
+        gap: 10px;
+        border-right: none;
+        padding: 10px;
+        background: rgba(255,255,255,0.04);
+        border-radius: 10px;
+      }
+
+      .benefit-icon { font-size: 1.65rem; }
+      .benefit strong { font-size: 0.78rem; }
+      .benefit span { font-size: 0.76rem; }
+
+      .section { padding: 28px 4%; }
+
+      .section-title {
+        font-size: 1.45rem;
+        margin-bottom: 20px;
+      }
+
+      .section-title::before,
+      .section-title::after {
+        width: 20px;
+        margin: 0 8px;
+      }
+
+      .logo-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .logo-panel {
+        max-width: 300px;
+        border-width: 4px;
+      }
+
+      .client-logo {
+        max-width: 260px;
+        max-height: 260px;
+      }
+
+      .logo-safe .client-logo { transform: scale(1.28); }
+      .logo-queen .client-logo { transform: scale(1.42); }
+
+      .product-grid,
+      .gallery-grid,
+      .review-grid,
+      .steps,
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .product-card {
+        max-width: 380px;
+        margin: 0 auto;
+        padding: 18px 14px;
+        border-width: 4px;
+      }
+
+      .product-card img { height: 210px; }
+
+      .gallery-item {
+        min-height: auto;
+        padding: 12px;
+      }
+
+      .gallery-item img {
+        height: auto;
+        max-height: 360px;
+      }
+
+      .dark-section { padding: 28px 5%; }
+
+      .steps { text-align: left; }
+
+      .steps > div {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 12px;
+        align-items: start;
+        background: rgba(255,255,255,0.04);
+        padding: 14px;
+        border-radius: 10px;
+      }
+
+      .step-icon {
+        margin: 0;
+        font-size: 1.7rem;
+      }
+
+      .cta { padding: 30px 5%; }
+
+      .cta-inner {
+        display: block;
+        text-align: center;
+      }
+
+      .cta h2 { font-size: 1.9rem; }
+
+      .cta-actions {
+        margin-top: 18px;
+        min-width: 0;
+      }
+
+      .cta-actions .btn,
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      footer { padding: 26px 5%; }
+      .footer-grid { text-align: center; }
+
+      .enlarged,
+      .zoomed {
+        transform: scale(1.08);
+      }
     }
 
-    @media (max-width: 680px) {
-      .top-bar { justify-content: center; text-align: center; }
-      .nav { justify-content: center; }
-      .brand { width: 100%; }
-      .brand-text { align-items: flex-start; }
-      .nav > .btn { width: 100%; }
-      .hero-inner { padding: 42px 6% 36px; }
-      .hero h1 { font-size: 2.55rem; letter-spacing: -1px; }
-      .hero-actions .btn { width: 100%; }
-      .benefits-grid, .product-grid, .steps, .gallery-grid, .review-grid, .logo-row {
-        grid-template-columns: 1fr;
+    @media (max-width: 480px) {
+      .top-bar { font-size: 0.62rem; }
+
+      .brand {
+        flex-direction: column;
+        text-align: center;
       }
-      .benefit { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.22); padding-bottom: 16px; }
-      .benefit:last-child { border-bottom: none; }
-      .section-title::before, .section-title::after { width: 20px; margin: 0 8px; }
-      .cta-inner { display: block; text-align: center; }
-      .cta-actions { margin-top: 18px; min-width: 0; }
-      .footer-grid { grid-template-columns: 1fr; text-align: center; }
-      .enlarged, .zoomed { transform: scale(1.25); }
-      .trusted { padding-top: 20px; padding-bottom: 20px; }
-      .trusted .section-title { margin-bottom: 16px; }
-      .logo-panel { max-width: 340px; aspect-ratio: 1 / 1; padding: 16px; }
-      .client-logo { max-width: 300px; max-height: 300px; }
-      .logo-safe .client-logo { max-width: 300px; transform: scale(1.35); }
-      .logo-az .client-logo { max-width: 300px; transform: scale(1); }
-      .logo-queen .client-logo { max-width: 300px; transform: scale(1.5); }
+
+      .brand-text { align-items: center; }
+      .brand img { width: 112px; }
+
+      .nav-links {
+        gap: 10px;
+        font-size: 0.68rem;
+      }
+
+      .hero-banner-img { width: 100%; }
+
+      .benefits-grid { grid-template-columns: 1fr; }
+
+      .trusted .section-title,
+      .section-title {
+        font-size: 1.25rem;
+        line-height: 1.15;
+      }
+
+      .product-card { width: 100%; }
+      .product-card img { height: 190px; }
+      .swatches { flex-wrap: wrap; }
+      .gallery-item img { max-height: 300px; }
+      .review-card { padding: 18px; }
+      .cta h2 { font-size: 1.65rem; }
     }
+
+
   </style>
 </head>
 <body>
